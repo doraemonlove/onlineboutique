@@ -1,0 +1,60 @@
+# Default values for onlineboutique.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+images:
+  repository: 223.193.36.130/library
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "0.0.1"
+  imagePullPolicy: Always
+
+adService:
+  create: true
+  name: adservice
+
+cartService:
+  create: true
+  name: cartservice
+
+checkoutService:
+  create: true
+  name: checkoutservice
+
+currencyService:
+  create: true
+  name: currencyservice
+
+emailService:
+  create: true
+  name: emailservice
+
+frontend:
+  create: true
+  name: frontend
+
+loadGenerator:
+  create: true
+  name: loadgenerator
+  checkFrontendInitContainer: true
+  locustExporter: 223.193.36.130/library/locust:1.0.2
+
+paymentService:
+  create: true
+  name: paymentservice
+
+productCatalogService:
+  create: true
+  name: productcatalogservice
+  # Specifies an extra latency to any request on productcatalogservice, by default no extra latency.
+  extraLatency: ""
+
+recommendationService:
+  create: true
+  name: recommendationservice
+
+shippingService:
+  create: true
+  name: shippingservice
+
+redis:
+  create: true

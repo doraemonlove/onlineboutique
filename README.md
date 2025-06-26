@@ -96,6 +96,8 @@ mysql -h <HOST> -P <PORT> -u <USER> -p addatabase < addatabase.sql
 
 启动流量注入：`kubectl apply -f loadgenerator.yaml -n YOUR_NAMESPACE`。
 
+卸载，执行 `kubectl delete -f YOUR_YAML_FILE -n YOUR_NAMESPACE`。
+
 ### 5. 流量说明
 
 本项目提供的是 `Locust` 流量注入工具，具体详细可以去官方文档查看，`Locust` 使用的注入文件在 `src/loadgenerator` 中给出。
